@@ -20,10 +20,10 @@ function App() {
 
       const threshhold = units === 'metric' ? 20 : 60;
       if (data.temp <= threshhold) setbg(coldBg);
-      else setbg(coldBg);
+      else setbg(hotBg);
     }
     fetchWeatherData();
-  }, [units, city])
+  }, [units, city, bg])
 
   const handleUnitsClick = (e) => {
     const button = e.currentTarget;
